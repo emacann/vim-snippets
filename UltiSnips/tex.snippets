@@ -222,6 +222,10 @@ $0
 endsnippet
 # vim:ft=snippets:
 
+snippet nac "New Acronym Entry" b
+\newacronym{${1:${VISUAL:mnemonic}}}{${2:short}}{${3:long}}$0
+endsnippet
+
 snippet al "Acronym Long" i
 \acrlong{${1}}
 endsnippet
@@ -233,3 +237,4 @@ endsnippet
 snippet ag "Acronym Global" i
 \gls{${1}}
 endsnippet
+
