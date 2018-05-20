@@ -53,11 +53,11 @@ snippet casez
 	endcase
 # Always block
 snippet al
-	always @(${1:/* sensitive list */}) begin
+	always @(${1:*}) begin
 		${0}
 	end
 # Module block
 snippet mod
 	module ${1:module_name} (${2});
 		${0}
-	endmodule
+	endmodule : $1
