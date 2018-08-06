@@ -73,18 +73,18 @@ snippet pkg
 	endpackage : $1
 
 snippet am
-	am__${0:name} : assume property (
-		${1:/* property /*}
+	am__${1:name} : assume property (
+		${0:/* property /*}
 	);
 
 snippet as
-	as__${0:name} : assert property (
-		${1:/* property /*}
+	as__${1:name} : assert property (
+		${0:/* property /*}
 	);
 
 snippet co
-	co__${0:name} : cover property (
-		${1:/* property /*}
+	co__${1:name} : cover property (
+		${0:/* property /*}
 	);
 
 snippet -
@@ -94,6 +94,6 @@ snippet =
 	|=>
 
 snippet pr
-	property pr__${0:name};
-		${1:/* property /*}
+	property pr__${1:name};
+		${0:/* property /*}
 	endproperty
