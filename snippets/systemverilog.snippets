@@ -71,3 +71,29 @@ snippet pkg
 	package ${1:package_name};
 		${0}
 	endpackage : $1
+
+snippet am
+	am__${0:name} : assume property (
+		${1:/* property /*}
+	);
+
+snippet as
+	as__${0:name} : assert property (
+		${1:/* property /*}
+	);
+
+snippet co
+	co__${0:name} : cover property (
+		${1:/* property /*}
+	);
+
+snippet -
+	|->
+
+snippet =
+	|=>
+
+snippet pr
+	property pr__${0:name};
+		${1:/* property /*}
+	endproperty
