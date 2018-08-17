@@ -72,28 +72,38 @@ snippet pkg
 		${0}
 	endpackage : $1
 
+# Assume property
 snippet am
 	am__${1:name} : assume property (
 		${0:/* property */}
 	);
+	
 
+# Assert property
 snippet as
 	as__${1:name} : assert property (
 		${0:/* property */}
 	);
+	
 
+# Cover property
 snippet co
 	co__${1:name} : cover property (
 		${0:/* property */}
 	);
+	
 
+# SVA same-cycle implication
 snippet -
 	|-> 
 
+# SVA next-cycle implication
 snippet =
 	|=> 
 
+# Property
 snippet pr
 	property pr__${1:name};
 		${0:/* property */}
 	endproperty
+	
