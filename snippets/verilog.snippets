@@ -61,3 +61,18 @@ snippet mod
 	module ${1:module_name} (${2});
 		${0}
 	endmodule : $1
+# Input wire
+snippet wi
+	input wire ${1:signal_name};
+# Input wire array
+snippet wia
+	input wire [${1}:${2:0}] ${3:signal_name};
+# Output wire
+snippet wo
+	output wire ${1:signal_name};
+snippet ro
+	output reg ${1:signal_name};
+snippet woa
+	output wire [${1}:${2:0}] ${3:signal_name};
+snippet roa
+	output reg [${1}:${2:0}] ${3:signal_name};
