@@ -110,7 +110,7 @@ snippet pr
 
 # Property Display
 snippet prd
-	property pr__${2:name};
+	property pr__${1:name};
 		${0:/* property */}
 	endproperty
-	`DISPLAY_SVA_ASSERT_ASSUME(INTERNAL_PROP_EN, ${1:ASSERT_EN}, $2}
+	\`DISPLAY_SVA_ASSERT_ASSUME(INTERNAL_PROP_EN, ASS${2:ERT}_EN, $1);
