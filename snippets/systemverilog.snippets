@@ -17,9 +17,14 @@ snippet alc
 	end $1
 # Sequential logic
 snippet alff
-	always_ff @(posedge ${1:clk}) begin ${2:: statement_label}
-		${0}
-	end $2
+	always_ff @(posedge ${1:clk} or negedge ${2:reset_n}) begin
+		if (!$2) begin
+			${3}
+		end else begin
+			${0}
+		end
+	end
+	
 # Latched logic
 snippet all
 	always_latch begin ${1:: statement_label}
