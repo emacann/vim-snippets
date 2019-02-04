@@ -165,6 +165,18 @@ snippet emh
 	)
 	
 
+# Embedded Liveness
+snippet eml
+	property pr__${2:name};
+		${0:/* property */}
+	endproperty
+	\`EMB_ASSERT_LIVE(
+		$2,
+		"${1:comment}",
+		pr__$2
+	)
+	
+
 # Embedded Cover
 snippet emc
 	property pr__${1:name};
