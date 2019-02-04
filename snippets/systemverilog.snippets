@@ -129,3 +129,62 @@ snippet prm
 	\`DISPLAY_SVA_ASSERT_ASSUME(SVA_EN, AM_EN, $1);
 	
 
+# Embedded Assert
+snippet ems
+	property pr__${2:name};
+		${0:/* property /*}
+	endproperty
+	\`EMB_ASSERT(
+		$2,
+		"${1:comment}",
+		pr__$2
+	)
+	
+
+# Embedded Assume
+snippet emm
+	property pr__${2:name};
+		${0:/* property /*}
+	endproperty
+	\`EMB_ASSERT(
+		int_am__$2,
+		"${1:comment}",
+		pr__$2
+	)
+	
+
+# Embedded Helper
+snippet emh
+	property pr__${2:name};
+		${0:/* property /*}
+	endproperty
+	\`EMB_HELPER(
+		$2,
+		"${1:comment}",
+		pr__$2
+	)
+	
+
+# Embedded Cover
+snippet emc
+	property pr__${1:name};
+		${0:/* property /*}
+	endproperty
+	\`EMB_HELPER(
+		$1,
+		pr__$1
+	)
+	
+
+# Symbolic Assume
+snippet sym
+	property pr__${2:name};
+		${0:/* property /*}
+	endproperty
+	\`EMB_ASSERT(
+		sym_am__$2,
+		"${1:comment}",
+		pr__$2
+	)
+	
+
