@@ -132,7 +132,7 @@ snippet prm
 # Embedded Assert
 snippet ems
 	property pr__${2:name};
-		${0:/* property /*}
+		${0:/* property */}
 	endproperty
 	\`EMB_ASSERT(
 		$2,
@@ -144,7 +144,7 @@ snippet ems
 # Embedded Assume
 snippet emm
 	property pr__${2:name};
-		${0:/* property /*}
+		${0:/* property */}
 	endproperty
 	\`EMB_ASSERT(
 		int_am__$2,
@@ -156,7 +156,7 @@ snippet emm
 # Embedded Helper
 snippet emh
 	property pr__${2:name};
-		${0:/* property /*}
+		${0:/* property */}
 	endproperty
 	\`EMB_HELPER(
 		$2,
@@ -168,7 +168,7 @@ snippet emh
 # Embedded Cover
 snippet emc
 	property pr__${1:name};
-		${0:/* property /*}
+		${0:/* property */}
 	endproperty
 	\`EMB_HELPER(
 		$1,
@@ -179,7 +179,7 @@ snippet emc
 # Symbolic Assume
 snippet sym
 	property pr__${2:name};
-		${0:/* property /*}
+		${0:/* property */}
 	endproperty
 	\`EMB_ASSERT(
 		sym_am__$2,
