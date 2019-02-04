@@ -165,13 +165,25 @@ snippet emh
 	)
 	
 
-# Embedded Liveness
-snippet eml
+# Embedded Liveness Assert
+snippet emsl
 	property pr__${2:name};
 		${0:/* property */}
 	endproperty
 	\`EMB_ASSERT_LIVE(
 		$2,
+		"${1:comment}",
+		pr__$2
+	)
+	
+
+# Embedded Liveness Assume
+snippet emml
+	property pr__${2:name};
+		${0:/* property */}
+	endproperty
+	\`EMB_ASSERT_LIVE(
+		int_am__$2,
 		"${1:comment}",
 		pr__$2
 	)
