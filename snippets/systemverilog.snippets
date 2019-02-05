@@ -212,3 +212,40 @@ snippet sym
 	)
 	
 
+# Interface Assert
+snippet ifs
+	property pr__${3:name};
+		${0:/* property */}
+	endproperty
+	\`INTF_ASSERT(
+		${1:direction},
+		sym_am__$3,
+		"${2:comment}",
+		pr__$3
+	)
+	
+
+# Interface Liveness Assert
+snippet ifsl
+	property pr__${3:name};
+		${0:/* property */}
+	endproperty
+	\`INTF_ASSERT_LIVE(
+		${1:direction},
+		sym_am__$3,
+		"${2:comment}",
+		pr__$3
+	)
+	
+
+# Interface Cover
+snippet ifc
+	property pr__${1:name};
+		${0:/* property */}
+	endproperty
+	\`EMB_COVER(
+		$1,
+		pr__$1
+	)
+	
+
