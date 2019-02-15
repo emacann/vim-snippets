@@ -131,121 +131,117 @@ snippet prm
 
 # Embedded Assert
 snippet ems
-	property pr__${2:name};
-		${0:/* property */}
-	endproperty
 	\`EMB_ASSERT(
-		$2,
+		${2:name},
 		"${1:comment}",
-		pr__$2
+		${0:/* property */}
 	)
 	
 
 # Embedded Assume
 snippet emm
-	property pr__${2:name};
-		${0:/* property */}
-	endproperty
 	\`EMB_ASSERT(
-		int_am__$2,
+		int_am__${2:name},
 		"${1:comment}",
-		pr__$2
+		${0:/* property */}
 	)
 	
 
 # Embedded Helper
 snippet emh
-	property pr__${2:name};
-		${0:/* property */}
-	endproperty
 	\`EMB_HELPER(
-		$2,
+		${2:name},
 		"${1:comment}",
-		pr__$2
+		${0:/* property */}
 	)
 	
 
 # Embedded Liveness Assert
 snippet emsl
-	property pr__${2:name};
-		${0:/* property */}
-	endproperty
 	\`EMB_ASSERT_LIVE(
-		$2,
+		${2:name},
 		"${1:comment}",
-		pr__$2
+		${0:/* property */}
 	)
 	
 
 # Embedded Liveness Assume
 snippet emml
-	property pr__${2:name};
-		${0:/* property */}
-	endproperty
 	\`EMB_ASSERT_LIVE(
-		int_am__$2,
+		int_am__${2:name},
 		"${1:comment}",
-		pr__$2
+		${0:/* property */}
 	)
 	
 
 # Embedded Cover
 snippet emc
-	property pr__${1:name};
-		${0:/* property */}
-	endproperty
 	\`EMB_COVER(
-		$1,
-		pr__$1
+		${1:name},
+		${0:/* property */}
+	)
+	
+
+# Symbolic Assert
+snippet sys
+	\`SYMB_ASSERT(
+		${2:name},
+		"${1:comment}",
+		${0:/* property */}
 	)
 	
 
 # Symbolic Assume
 snippet sym
-	property pr__${2:name};
-		${0:/* property */}
-	endproperty
-	\`EMB_ASSERT(
-		sym_am__$2,
+	\`SYMB_ASSUME(
+		${2:name},
 		"${1:comment}",
-		pr__$2
+		${0:/* property */}
+	)
+	
+
+# Symbolic Cover
+snippet syc
+	\`SYMB_COVER(
+		${1:name},
+		${0:/* property */}
+	)
+	
+
+# Symbolic Helper
+snippet syh
+	\`SYMB_HELPER(
+		${2:name},
+		"${1:comment}",
+		${0:/* property */}
 	)
 	
 
 # Interface Assert
 snippet ifs
-	property pr__${3:name};
-		${0:/* property */}
-	endproperty
 	\`INTF_ASSERT(
 		${1:driver},
-		$3,
+		${3:name},
 		"${2:comment}",
-		pr__$3
+		${0:/* property */}
 	)
 	
 
 # Interface Liveness Assert
-snippet ifsl
-	property pr__${3:name};
-		${0:/* property */}
-	endproperty
+snippet ifs
 	\`INTF_ASSERT_LIVE(
 		${1:driver},
-		$3,
+		${3:name},
 		"${2:comment}",
-		pr__$3
+		${0:/* property */}
 	)
 	
 
 # Interface Cover
 snippet ifc
-	property pr__${1:name};
-		${0:/* property */}
-	endproperty
 	\`INTF_COVER(
-		$1,
-		pr__$1
+		${1:name},
+		${0:/* property */}
 	)
 	
 
