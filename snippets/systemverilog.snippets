@@ -138,15 +138,6 @@ snippet ems
 	)
 	
 
-# Embedded Assume
-snippet emm
-	\`EMB_ASSERT(
-		int_am__${2:name},
-		"${1:comment}",
-		${0:/* property */}
-	)
-	
-
 # Embedded Helper
 snippet emh
 	\`EMB_HELPER(
@@ -160,15 +151,6 @@ snippet emh
 snippet emsl
 	\`EMB_ASSERT_LIVE(
 		${2:name},
-		"${1:comment}",
-		${0:/* property */}
-	)
-	
-
-# Embedded Liveness Assume
-snippet emml
-	\`EMB_ASSERT_LIVE(
-		int_am__${2:name},
 		"${1:comment}",
 		${0:/* property */}
 	)
@@ -241,6 +223,24 @@ snippet ifsl
 snippet ifc
 	\`INTF_COVER(
 		${1:name},
+		${0:/* property */}
+	)
+	
+
+# Block Assume
+snippet blm
+	\`BLK_ASSUME(
+		${2:name},
+		"${1:comment}",
+		${0:/* property */}
+	)
+	
+
+# Block Liveness Assume
+snippet blml
+	\`BLK_ASSUME_LIVE(
+		${2:name},
+		"${1:comment}",
 		${0:/* property */}
 	)
 	
