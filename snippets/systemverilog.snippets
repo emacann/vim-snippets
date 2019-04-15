@@ -227,6 +227,17 @@ snippet ifc
 	)
 	
 
+# Interface Valid-Ready Assert
+snippet ifvrs
+	\`INTF_VALID_READY_ASSERT(
+		${4:/* master */},
+		${3:/* slave */},
+		${2:/* valid */},
+		${1:/* data */},
+		${0:/* ready */}
+	)
+	
+
 # Block Assume
 snippet blm
 	\`BLK_ASSUME(
