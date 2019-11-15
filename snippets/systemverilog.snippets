@@ -17,11 +17,18 @@ snippet alc
 	end $1
 # Sequential logic
 snippet alff
-	always_ff @(posedge ${1:clk} or negedge ${2:reset_n}) begin
-		if (!$2) begin
-			${3}
-		end else begin
-			${0}
+	logic ${1:reg_name}_en_c;
+	logic [${2:DATA_WIDTH}-1:0] $1_nxt_c;
+	logic [$2-1:0] $1_r;
+	
+	assign $1_en_c  = 1'b1;
+	assign $1_nxt_c = '0;
+
+	always_ff @(posedge ${3:clk} or negedge ${4:reset_n}) begin
+		if (!$4) begin
+			$1_r <= '0;
+		end else if ($1_en_c) begin
+			$1_r <= $1_nxt_c;
 		end
 	end
 	
@@ -143,7 +150,7 @@ snippet emc
 
 # Embedded X-Check
 snippet emx
-	\`EMB_XCHECK(${1:driver}, ${0:/* signal */})
+	\`EMB_XCHECK(${0:/* signal */})
 
 # Symbolic Assert
 snippet sys
