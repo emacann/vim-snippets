@@ -53,26 +53,31 @@ snippet casez
 	endcase
 # Always block
 snippet al
-	always @(${1:*}) begin
+	always @(${1:/* sensitive list */}) begin
 		${0}
 	end
 # Module block
 snippet mod
 	module ${1:module_name} (${2});
 		${0}
-	endmodule : $1
-# Input wire
-snippet wi
-	input wire ${1:signal_name};
-# Input wire array
-snippet wia
-	input wire [${1}:${2:0}] ${3:signal_name};
-# Output wire
-snippet wo
-	output wire ${1:signal_name};
-snippet ro
-	output reg ${1:signal_name};
-snippet woa
-	output wire [${1}:${2:0}] ${3:signal_name};
-snippet roa
-	output reg [${1}:${2:0}] ${3:signal_name};
+	endmodule
+# For
+snippet for
+	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) begin
+		${4}
+	end
+# Forever
+snippet forev
+	forever begin
+		${0}
+	end
+# Function
+snippet fun
+	function ${1:void} ${2:name}(${3});
+		${0}
+	endfunction: $2
+# Task
+snippet task
+	task ${1:name}(${2});
+		${0}
+	endtask: $1
