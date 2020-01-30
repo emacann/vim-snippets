@@ -84,25 +84,6 @@ snippet pkg
 		${0}
 	endpackage : $1
 
-# Assume property
-snippet am
-	am__${1:name} : assume property (
-		${0:/* property */}
-	);
-
-# Assert property
-snippet as
-	as__${1:name} : assert property (
-		${0:/* property */}
-	);
-	
-
-# Cover property
-snippet co
-	co__${1:name} : cover property (
-		${0:/* property */}
-	);
-
 # SVA same-cycle implication
 snippet -
 	|-> 
@@ -111,40 +92,29 @@ snippet -
 snippet =
 	|=> 
 
-# Property
-snippet pr
-	property pr__${1:name};
-		${0:/* property */}
-	endproperty
-
 # Embedded Assert
 snippet ems
-	\`EMB_ASSERT(
-		${2:name},
+	\`EMB_ASSERT(${2:name},
 		"${1:comment}",
 		${0:/* property */}
 	)
 
 # Embedded Helper
 snippet emh
-	\`EMB_HELPER(
-		${2:name},
-		"${1:comment}",
+	\`EMB_HELPER(${2:name}, "${1:comment}",
 		${0:/* property */}
 	)
 
 # Embedded Liveness Assert
 snippet emsl
-	\`EMB_ASSERT_LIVE(
-		${2:name},
+	\`EMB_ASSERT_LIVE(${2:name},
 		"${1:comment}",
 		${0:/* property */}
 	)
 
 # Embedded Cover
 snippet emc
-	\`EMB_COVER(
-		${1:name},
+	\`EMB_COVER(${1:name},
 		${0:/* property */}
 	)
 
@@ -152,100 +122,29 @@ snippet emc
 snippet emx
 	\`EMB_XCHECK(${0:/* signal */})
 
-# Symbolic Assert
-snippet sys
-	\`SYMB_ASSERT(
-		${2:name},
-		"${1:comment}",
-		${0:/* property */}
-	)
-
-# Symbolic Assume
-snippet sym
-	\`SYMB_ASSUME(
-		${2:name},
-		"${1:comment}",
-		${0:/* property */}
-	)
-
-# Symbolic Cover
-snippet syc
-	\`SYMB_COVER(
-		${1:name},
-		${0:/* property */}
-	)
-
-# Symbolic Helper
-snippet syh
-	\`SYMB_HELPER(
-		${2:name},
-		"${1:comment}",
-		${0:/* property */}
-	)
-
 # Interface Assert
 snippet ifs
-	\`INTF_ASSERT(
-		${1:driver},
-		${3:name},
+	\`INTF_ASSERT(${1:driver}, ${3:name},
 		"${2:comment}",
 		${0:/* property */}
 	)
 
 # Interface Liveness Assert
 snippet ifsl
-	\`INTF_ASSERT_LIVE(
-		${1:driver},
-		${3:name},
+	\`INTF_ASSERT_LIVE(${1:driver}, ${3:name},
 		"${2:comment}",
 		${0:/* property */}
 	)
 
 # Interface Cover
 snippet ifc
-	\`INTF_COVER(
-		${1:name},
+	\`INTF_COVER(${1:name},
 		${0:/* property */}
 	)
 
 # Interface X-Check
 snippet ifx
 	\`INTF_XCHECK(${1:driver}, ${0:/* signal */})
-
-# Interface Valid-Ready Assert
-snippet ifvrs
-	\`INTF_VALID_READY_ASSERT(
-		${4:/* master */},
-		${3:/* slave */},
-		${2:/* valid */},
-		${1:/* data */},
-		${0:/* ready */}
-	)
-
-# Interface Request-Acknowledge Assert
-snippet ifvrs
-	\`INTF_REQ_ACK_ASSERT(
-		${3:/* master */},
-		${2:/* slave */},
-		${1:/* req */},
-		${0:/* ack */}
-	)
-
-# Block Assume
-snippet blm
-	\`BLK_ASSUME(
-		${2:name},
-		"${1:comment}",
-		${0:/* property */}
-	)
-
-# Block Liveness Assume
-snippet blml
-	\`BLK_ASSUME_LIVE(
-		${2:name},
-		"${1:comment}",
-		${0:/* property */}
-	)
 
 # For Generate
 snippet forg
