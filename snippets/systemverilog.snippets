@@ -101,7 +101,8 @@ snippet ems
 # Embedded Helper
 snippet emh
 	\`EMB_HELPER(${2:name}, "${1:comment}",
-		${0:/* property */}
+		${0:/* property */},
+		${3:group_hier}
 	)
 
 # Embedded Liveness Assert
@@ -109,6 +110,14 @@ snippet emsl
 	\`EMB_ASSERT_LIVE(${2:name},
 		"${1:comment}",
 		${0:/* property */}
+	)
+
+# Embedded Overconstraint
+snippet emo
+	\`EMB_OVERCONS(${2:name},
+		"${1:comment}",
+		${0:/* property */},
+		${3:group_hier}
 	)
 
 # Embedded Cover
@@ -133,6 +142,14 @@ snippet ifsl
 	\`INTF_ASSERT_LIVE(${1:driver}, ${3:name},
 		"${2:comment}",
 		${0:/* property */}
+	)
+
+# Interface Overconstraint
+snippet ifo
+	\`INTF_OVERCONS(${1:driver}, ${3:name},
+		"${2:comment}",
+		${0:/* property */},
+		${4:group_hier}
 	)
 
 # Interface Cover
